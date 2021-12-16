@@ -6,6 +6,8 @@
   --bs-dark-green: #3a6f56;
   --bs-red: #dc3545;
   --bs-gray: #6c757d;
+  --bs-card: #d1e7dd;
+  --bs-dark: rgba(0, 0, 0, 0.4);
   --bs-gray-100: #f8f9fa;
   --bs-gray-200: #e9ecef;
   --bs-gray-300: #dee2e6;
@@ -21,17 +23,21 @@
   --bs-dark-green: #3a6f56;
   --bs-red: #dc3545;
   --bs-gray: #6c757d;
+  --bs-card: #d1e7dd;
+  --bs-dark: rgba(0, 0, 0, 0.4);
   --bs-light-green-rgb: 235, 255, 239;
   --bs-green-rgb: 40, 167, 69;
   --bs-medium-green-rgb: 71, 159, 118;
   --bs-dark-green-rgb: 58, 111, 86;
   --bs-red-rgb: 220, 53, 69;
   --bs-gray-rgb: 108, 117, 125;
+  --bs-card-rgb: 209, 231, 221;
+  --bs-dark-rgb: 0, 0, 0;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 255, 255, 255;
-  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-sans-serif: "Poppins", sans-serif;
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
@@ -56,6 +62,8 @@
   --bs-dark-green: #3a6f56;
   --bs-red: #dc3545;
   --bs-gray: #6c757d;
+  --bs-card: #d1e7dd;
+  --bs-dark: rgba(0, 0, 0, 0.4);
   --bs-gray-100: #f8f9fa;
   --bs-gray-200: #e9ecef;
   --bs-gray-300: #dee2e6;
@@ -71,17 +79,21 @@
   --bs-dark-green: #3a6f56;
   --bs-red: #dc3545;
   --bs-gray: #6c757d;
+  --bs-card: #d1e7dd;
+  --bs-dark: rgba(0, 0, 0, 0.4);
   --bs-light-green-rgb: 235, 255, 239;
   --bs-green-rgb: 40, 167, 69;
   --bs-medium-green-rgb: 71, 159, 118;
   --bs-dark-green-rgb: 58, 111, 86;
   --bs-red-rgb: 220, 53, 69;
   --bs-gray-rgb: 108, 117, 125;
+  --bs-card-rgb: 209, 231, 221;
+  --bs-dark-rgb: 0, 0, 0;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 255, 255, 255;
-  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-sans-serif: "Poppins", sans-serif;
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
@@ -2208,15 +2220,15 @@ progress {
 }
 
 .table-dark {
-  --bs-table-bg: #212529;
-  --bs-table-striped-bg: #2c3034;
+  --bs-table-bg: rgba(0, 0, 0, 0.4);
+  --bs-table-striped-bg: rgba(0, 0, 0, 0.43);
   --bs-table-striped-color: #fff;
-  --bs-table-active-bg: #373b3e;
+  --bs-table-active-bg: rgba(0, 0, 0, 0.46);
   --bs-table-active-color: #fff;
-  --bs-table-hover-bg: #323539;
+  --bs-table-hover-bg: rgba(0, 0, 0, 0.445);
   --bs-table-hover-color: #fff;
-  color: #fff;
-  border-color: #373b3e;
+  color: #000;
+  border-color: rgba(0, 0, 0, 0.46);
 }
 
 .table-responsive {
@@ -3489,6 +3501,88 @@ fieldset:disabled .btn {
   border-color: #6c757d;
 }
 
+.btn-card {
+  color: #000;
+  background-color: #d1e7dd;
+  border-color: #d1e7dd;
+}
+
+.btn-card:hover {
+  color: #000;
+  background-color: #d8ebe2;
+  border-color: #d6e9e0;
+}
+
+.btn-check:focus + .btn-card, .btn-card:focus {
+  color: #000;
+  background-color: #d8ebe2;
+  border-color: #d6e9e0;
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(178, 196, 188, 0.5);
+          box-shadow: 0 0 0 0.25rem rgba(178, 196, 188, 0.5);
+}
+
+.btn-check:checked + .btn-card,
+.btn-check:active + .btn-card, .btn-card:active, .btn-card.active,
+.show > .btn-card.dropdown-toggle {
+  color: #000;
+  background-color: #daece4;
+  border-color: #d6e9e0;
+}
+
+.btn-check:checked + .btn-card:focus,
+.btn-check:active + .btn-card:focus, .btn-card:active:focus, .btn-card.active:focus,
+.show > .btn-card.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(178, 196, 188, 0.5);
+          box-shadow: 0 0 0 0.25rem rgba(178, 196, 188, 0.5);
+}
+
+.btn-card:disabled, .btn-card.disabled {
+  color: #000;
+  background-color: #d1e7dd;
+  border-color: #d1e7dd;
+}
+
+.btn-dark {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-color: rgba(0, 0, 0, 0.4);
+}
+
+.btn-dark:hover {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.49);
+  border-color: rgba(0, 0, 0, 0.52);
+}
+
+.btn-check:focus + .btn-dark, .btn-dark:focus {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.49);
+  border-color: rgba(0, 0, 0, 0.52);
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(106, 106, 106, 0.5);
+          box-shadow: 0 0 0 0.25rem rgba(106, 106, 106, 0.5);
+}
+
+.btn-check:checked + .btn-dark,
+.btn-check:active + .btn-dark, .btn-dark:active, .btn-dark.active,
+.show > .btn-dark.dropdown-toggle {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.52);
+  border-color: rgba(0, 0, 0, 0.55);
+}
+
+.btn-check:checked + .btn-dark:focus,
+.btn-check:active + .btn-dark:focus, .btn-dark:active:focus, .btn-dark.active:focus,
+.show > .btn-dark.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(106, 106, 106, 0.5);
+          box-shadow: 0 0 0 0.25rem rgba(106, 106, 106, 0.5);
+}
+
+.btn-dark:disabled, .btn-dark.disabled {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-color: rgba(0, 0, 0, 0.4);
+}
+
 .btn-outline-light-green {
   color: #ebffef;
   border-color: #ebffef;
@@ -3690,6 +3784,74 @@ fieldset:disabled .btn {
 
 .btn-outline-gray:disabled, .btn-outline-gray.disabled {
   color: #6c757d;
+  background-color: transparent;
+}
+
+.btn-outline-card {
+  color: #d1e7dd;
+  border-color: #d1e7dd;
+}
+
+.btn-outline-card:hover {
+  color: #000;
+  background-color: #d1e7dd;
+  border-color: #d1e7dd;
+}
+
+.btn-check:focus + .btn-outline-card, .btn-outline-card:focus {
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(209, 231, 221, 0.5);
+          box-shadow: 0 0 0 0.25rem rgba(209, 231, 221, 0.5);
+}
+
+.btn-check:checked + .btn-outline-card,
+.btn-check:active + .btn-outline-card, .btn-outline-card:active, .btn-outline-card.active, .btn-outline-card.dropdown-toggle.show {
+  color: #000;
+  background-color: #d1e7dd;
+  border-color: #d1e7dd;
+}
+
+.btn-check:checked + .btn-outline-card:focus,
+.btn-check:active + .btn-outline-card:focus, .btn-outline-card:active:focus, .btn-outline-card.active:focus, .btn-outline-card.dropdown-toggle.show:focus {
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(209, 231, 221, 0.5);
+          box-shadow: 0 0 0 0.25rem rgba(209, 231, 221, 0.5);
+}
+
+.btn-outline-card:disabled, .btn-outline-card.disabled {
+  color: #d1e7dd;
+  background-color: transparent;
+}
+
+.btn-outline-dark {
+  color: rgba(0, 0, 0, 0.4);
+  border-color: rgba(0, 0, 0, 0.4);
+}
+
+.btn-outline-dark:hover {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-color: rgba(0, 0, 0, 0.4);
+}
+
+.btn-check:focus + .btn-outline-dark, .btn-outline-dark:focus {
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.5);
+}
+
+.btn-check:checked + .btn-outline-dark,
+.btn-check:active + .btn-outline-dark, .btn-outline-dark:active, .btn-outline-dark.active, .btn-outline-dark.dropdown-toggle.show {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-color: rgba(0, 0, 0, 0.4);
+}
+
+.btn-check:checked + .btn-outline-dark:focus,
+.btn-check:active + .btn-outline-dark:focus, .btn-outline-dark:active:focus, .btn-outline-dark.active:focus, .btn-outline-dark.dropdown-toggle.show:focus {
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.5);
+}
+
+.btn-outline-dark:disabled, .btn-outline-dark.disabled {
+  color: rgba(0, 0, 0, 0.4);
   background-color: transparent;
 }
 
@@ -5549,6 +5711,26 @@ fieldset:disabled .btn {
   color: #34383c;
 }
 
+.alert-card {
+  color: #545c58;
+  background-color: #f6faf8;
+  border-color: #f1f8f5;
+}
+
+.alert-card .alert-link {
+  color: #434a46;
+}
+
+.alert-dark {
+  color: rgba(0, 0, 0, 0.64);
+  background-color: rgba(240, 240, 240, 0.88);
+  border-color: rgba(230, 230, 230, 0.82);
+}
+
+.alert-dark .alert-link {
+  color: rgba(0, 0, 0, 0.712);
+}
+
 @-webkit-keyframes progress-bar-stripes {
   0% {
     background-position-x: 1rem;
@@ -5976,6 +6158,38 @@ fieldset:disabled .btn {
   color: #fff;
   background-color: #41464b;
   border-color: #41464b;
+}
+
+.list-group-item-card {
+  color: #545c58;
+  background-color: #f6faf8;
+}
+
+.list-group-item-card.list-group-item-action:hover, .list-group-item-card.list-group-item-action:focus {
+  color: #545c58;
+  background-color: #dde1df;
+}
+
+.list-group-item-card.list-group-item-action.active {
+  color: #fff;
+  background-color: #545c58;
+  border-color: #545c58;
+}
+
+.list-group-item-dark {
+  color: rgba(0, 0, 0, 0.64);
+  background-color: rgba(240, 240, 240, 0.88);
+}
+
+.list-group-item-dark.list-group-item-action:hover, .list-group-item-dark.list-group-item-action:focus {
+  color: rgba(0, 0, 0, 0.64);
+  background-color: rgba(210, 210, 210, 0.892);
+}
+
+.list-group-item-dark.list-group-item-action.active {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.64);
+  border-color: rgba(0, 0, 0, 0.64);
 }
 
 .btn-close {
@@ -7237,6 +7451,22 @@ fieldset:disabled .btn {
   color: #565e64;
 }
 
+.link-card {
+  color: #d1e7dd;
+}
+
+.link-card:hover, .link-card:focus {
+  color: #daece4;
+}
+
+.link-dark {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.link-dark:hover, .link-dark:focus {
+  color: rgba(0, 0, 0, 0.52);
+}
+
 .ratio {
   position: relative;
   width: 100%;
@@ -7693,6 +7923,14 @@ fieldset:disabled .btn {
 
 .border-gray {
   border-color: #6c757d !important;
+}
+
+.border-card {
+  border-color: #d1e7dd !important;
+}
+
+.border-dark {
+  border-color: rgba(0, 0, 0, 0.4) !important;
 }
 
 .border-white {
@@ -8597,6 +8835,16 @@ fieldset:disabled .btn {
   color: rgba(var(--bs-gray-rgb), var(--bs-text-opacity)) !important;
 }
 
+.text-card {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-card-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-dark {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-dark-rgb), var(--bs-text-opacity)) !important;
+}
+
 .text-black {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-black-rgb), var(--bs-text-opacity)) !important;
@@ -8676,6 +8924,16 @@ fieldset:disabled .btn {
 .bg-gray {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-gray-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-card {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-card-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-dark {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
 }
 
 .bg-black {
@@ -11797,6 +12055,7 @@ fieldset:disabled .btn {
   width: 22.75rem;
   height: 28.75rem;
   border-radius: 1.25rem;
+  margin: 0 1rem;
   padding: 1rem 2rem;
 }
 
@@ -11868,10 +12127,74 @@ fieldset:disabled .btn {
 
 @media (max-width: 767.98px) {
   .testimonials.testimonials .card-testimonial-full {
-    margin-bottom: 5rem;
+    margin-bottom: 8rem;
   }
   .testimonials.testimonials .card-testimonial-half {
-    margin-bottom: 5rem;
+    margin-bottom: 8rem;
   }
+}
+
+.hero .hero-image {
+  width: 500px;
+  height: 500px;
+  border-radius: 100px 0 100px;
+}
+
+.line {
+  height: 154px;
+  width: 2px;
+  background-color: #000;
+}
+
+.navbar-tentang-kami {
+  height: 142px;
+  width: 100%;
+  background-color: #479f76;
+}
+
+.pencapaian {
+  margin-top: -10vw;
+  max-width: 1124px;
+  min-height: 250px;
+  border-radius: 10px;
+}
+
+.pencapaian .pencapaian-card .card {
+  width: 196px;
+  height: 150px;
+}
+
+.pencapaian .pencapaian-card .body {
+  position: relative;
+  z-index: 2;
+  margin-top: -2vw;
+}
+
+.prestasi .card {
+  width: 416px;
+  height: 450px;
+}
+
+.acara .card {
+  width: 415px;
+  height: 568px;
+  border-radius: 0 0 10px 10px;
+}
+
+.acara .card .card-img {
+  width: 100%;
+  height: 400px;
+}
+
+.kontak .form {
+  max-width: 562px;
+  height: 600px;
+}
+
+.kontak .informasi {
+  max-width: 562px;
+  height: 600px;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#479f76), to(rgba(18, 189, 109, 0.81)));
+  background-image: linear-gradient(to bottom right, #479f76, rgba(18, 189, 109, 0.81));
 }
 /*# sourceMappingURL=main.css.map */

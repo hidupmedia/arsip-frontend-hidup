@@ -4,12 +4,16 @@
 @import "../node_modules/bootstrap/scss/functions";
 
 // 2. Include any default variable overrides here
+$font-family-sans-serif: "Poppins", sans-serif;
+
+$card: #d1e7dd;
 $light-green: #ebffef;
 $green: #28a745;
 $medium-green: #479f76;
 $dark-green: #3a6f56;
 $gray: #6c757d;
 $red: #dc3545;
+$dark: rgba(0, 0, 0, 0.4);
 
 $colors: (
 	"light-green": $light-green,
@@ -18,6 +22,8 @@ $colors: (
 	"dark-green": $dark-green,
 	"red": $red,
 	"gray": $gray,
+	"card": $card,
+	"dark": $dark,
 );
 
 $theme-colors: (
@@ -27,6 +33,8 @@ $theme-colors: (
 	"dark-green": $dark-green,
 	"red": $red,
 	"gray": $gray,
+	"card": $card,
+	"dark": $dark,
 );
 
 $navbar-light-color: #000;
@@ -102,6 +110,7 @@ $border-radius-lg: 1.25rem;
 	width: 22.75rem;
 	height: 28.75rem;
 	border-radius: 1.25rem;
+	margin: 0 1rem;
 	padding: 1rem 2rem;
 
 	&:hover {
@@ -182,10 +191,85 @@ $border-radius-lg: 1.25rem;
 
 	@media (max-width: 767.98px) {
 		&.testimonials .card-testimonial-full {
-			margin-bottom: 5rem;
+			margin-bottom: 8rem;
 		}
 		&.testimonials .card-testimonial-half {
-			margin-bottom: 5rem;
+			margin-bottom: 8rem;
 		}
+	}
+}
+
+// TENTANG KAMI
+.hero {
+	& .hero-image {
+		width: 500px;
+		height: 500px;
+		border-radius: 100px 0 100px;
+	}
+}
+.line {
+	height: 154px;
+	width: 2px;
+	background-color: #000;
+}
+
+.navbar-tentang-kami {
+	height: 142px;
+	width: 100%;
+	background-color: $medium-green;
+}
+
+.pencapaian {
+	margin-top: -10vw;
+	max-width: 1124px;
+	min-height: 250px;
+	border-radius: 10px;
+	& .pencapaian-card {
+		& .card {
+			width: 196px;
+			height: 150px;
+		}
+		& .body {
+			position: relative;
+			z-index: 2;
+			margin-top: -2vw;
+		}
+	}
+}
+
+.prestasi {
+	& .card {
+		width: 416px;
+		height: 450px;
+	}
+}
+
+// ACARA
+.acara {
+	& .card {
+		width: 415px;
+		height: 568px;
+		border-radius: 0 0 10px 10px;
+		& .card-img {
+			width: 100%;
+			height: 400px;
+		}
+	}
+}
+
+// KONTAK
+.kontak {
+	.form {
+		max-width: 562px;
+		height: 600px;
+	}
+	.informasi {
+		max-width: 562px;
+		height: 600px;
+		background-image: linear-gradient(
+			to bottom right,
+			rgb(71, 159, 118),
+			rgba(18, 189, 109, 0.81)
+		);
 	}
 }
