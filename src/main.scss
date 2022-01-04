@@ -1,0 +1,275 @@
+/* custom.scss */
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+$font-family-sans-serif: "Poppins", sans-serif;
+
+$card: #d1e7dd;
+$light-green: #ebffef;
+$green: #28a745;
+$medium-green: #479f76;
+$dark-green: #3a6f56;
+$gray: #6c757d;
+$red: #dc3545;
+$dark: rgba(0, 0, 0, 0.4);
+
+$colors: (
+	"light-green": $light-green,
+	"green": $green,
+	"medium-green": $medium-green,
+	"dark-green": $dark-green,
+	"red": $red,
+	"gray": $gray,
+	"card": $card,
+	"dark": $dark,
+);
+
+$theme-colors: (
+	"light-green": $light-green,
+	"green": $green,
+	"medium-green": $medium-green,
+	"dark-green": $dark-green,
+	"red": $red,
+	"gray": $gray,
+	"card": $card,
+	"dark": $dark,
+);
+
+$navbar-light-color: #000;
+$navbar-light-hover-color: $medium-green;
+$navbar-light-active-color: $medium-green;
+$border-radius-lg: 1.25rem;
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+/* finally, import Bootstrap to set the changes! */
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+.btn {
+	&:hover {
+		background-color: $dark-green;
+	}
+}
+
+.header {
+	background-image: linear-gradient(to top left, #fff 50%, $green 140%);
+}
+
+.nav-link.active {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.display-2,
+.display-4 {
+	letter-spacing: 0.3rem;
+}
+
+.fw-medium {
+	font-weight: 500;
+}
+
+.fw-semi-bold {
+	font-weight: 600;
+}
+.height-md-100vh {
+	@media (min-width: 768px) {
+		min-height: 100vh;
+	}
+}
+
+.tentang-kami-description {
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		from(rgba($medium-green, 0.4)),
+		to(#fff)
+	);
+	background-image: linear-gradient(
+		to bottom,
+		rgba($medium-green, 0.4) 0%,
+		$white 100%
+	);
+	backdrop-filter: blur(6px);
+	-webkit-backdrop-filter: blur(6px);
+
+	@media (min-width: 768px) {
+		margin-left: -11.75rem;
+		margin-top: 12.375rem;
+	}
+}
+
+.card-psikolog {
+	position: relative;
+	width: 22.75rem;
+	height: 28.75rem;
+	border-radius: 1.25rem;
+	margin: 0 1rem;
+	padding: 1rem 2rem;
+
+	&:hover {
+		background-color: rgba($black, 0.5);
+	}
+
+	.arrow {
+		cursor: pointer;
+	}
+
+	.description {
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 1.25rem;
+		background-color: rgba($white, 0.2);
+
+		.close {
+			position: absolute;
+			top: 1rem;
+			right: 1.5rem;
+			color: $black;
+			cursor: pointer;
+			font-size: 1.5rem;
+		}
+	}
+}
+
+.testimonials {
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		right top,
+		color-stop(50%, $light-green),
+		color-stop(150%, $green)
+	);
+	background-image: linear-gradient(
+		to right,
+		$light-green 50%,
+		$medium-green 150%
+	);
+
+	.card-testimonial-full {
+		position: relative;
+		width: 21.375rem;
+		height: 19rem;
+		border-radius: 1.25rem;
+		margin-bottom: 10.75rem;
+	}
+
+	.card-testimonial-half {
+		position: relative;
+		width: 21.375rem;
+		height: 12.625rem;
+		margin-bottom: 10.75rem;
+
+		&.on-top {
+			border-radius: 0 0 1.25rem 1.25rem;
+		}
+
+		&.on-bottom {
+			border-radius: 1.25rem 1.25rem 0 0;
+		}
+	}
+
+	.card-img {
+		position: absolute;
+		width: 7.313rem;
+		height: 7.625rem;
+		top: -5rem;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		transform: translateX(-50%);
+	}
+
+	@media (max-width: 767.98px) {
+		&.testimonials .card-testimonial-full {
+			margin-bottom: 8rem;
+		}
+		&.testimonials .card-testimonial-half {
+			margin-bottom: 8rem;
+		}
+	}
+}
+
+// TENTANG KAMI
+.hero {
+	& .hero-image {
+		width: 500px;
+		height: 500px;
+		border-radius: 100px 0 100px;
+	}
+}
+.line {
+	height: 154px;
+	width: 2px;
+	background-color: #000;
+}
+
+.navbar-tentang-kami {
+	height: 142px;
+	width: 100%;
+	background-color: $medium-green;
+}
+
+.pencapaian {
+	margin-top: -10vw;
+	max-width: 1124px;
+	min-height: 250px;
+	border-radius: 10px;
+	& .pencapaian-card {
+		& .card {
+			width: 196px;
+			height: 150px;
+		}
+		& .body {
+			position: relative;
+			z-index: 2;
+			margin-top: -2vw;
+		}
+	}
+}
+
+.prestasi {
+	& .card {
+		width: 416px;
+		height: 450px;
+	}
+}
+
+// ACARA
+.acara {
+	& .card {
+		width: 415px;
+		height: 568px;
+		border-radius: 0 0 10px 10px;
+		& .card-img {
+			width: 100%;
+			height: 400px;
+		}
+	}
+}
+
+// KONTAK
+.kontak {
+	.form {
+		max-width: 562px;
+		height: 600px;
+	}
+	.informasi {
+		max-width: 562px;
+		height: 600px;
+		background-image: linear-gradient(
+			to bottom right,
+			rgb(71, 159, 118),
+			rgba(18, 189, 109, 0.81)
+		);
+	}
+}
