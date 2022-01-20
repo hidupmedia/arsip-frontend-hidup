@@ -1,7 +1,7 @@
 /* custom.scss */
 
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
-@import "../node_modules/bootstrap/scss/functions";
+@import "./bootstrap/scss/functions";
 
 // 2. Include any default variable overrides here
 $font-family-sans-serif: "Poppins", sans-serif;
@@ -9,55 +9,89 @@ $font-family-sans-serif: "Poppins", sans-serif;
 $card: #d1e7dd;
 $light-green: #ebffef;
 $green: #28a745;
-$medium-green: #479f76;
-$dark-green: #3a6f56;
+$green-logo: #6eaf85;
+$hijau-lumut: #3a6f56;
+$dark-green: #022209;
 $gray: #6c757d;
 $red: #dc3545;
-$dark: rgba(0, 0, 0, 0.4);
+$white: #fff;
+$black: #000;
 
 $colors: (
 	"light-green": $light-green,
 	"green": $green,
-	"medium-green": $medium-green,
-	"dark-green": $dark-green,
+	"green-logo": $green-logo,
+	"hijau-lumut": $hijau-lumut,
 	"red": $red,
 	"gray": $gray,
 	"card": $card,
-	"dark": $dark,
+	"dark-green": $dark-green,
+	"white": $white,
+	"black": $black,
 );
 
 $theme-colors: (
 	"light-green": $light-green,
 	"green": $green,
-	"medium-green": $medium-green,
-	"dark-green": $dark-green,
+	"green-logo": $green-logo,
+	"hijau-lumut": $hijau-lumut,
 	"red": $red,
 	"gray": $gray,
 	"card": $card,
-	"dark": $dark,
+	"dark-green": $dark-green,
+	"white": $white,
+	"black": $black,
 );
 
-$navbar-light-color: #000;
-$navbar-light-hover-color: $medium-green;
-$navbar-light-active-color: $medium-green;
+$navbar-dark-color: #fff;
+$navbar-dark-hover-color: $dark-green;
+$navbar-dark-active-color: $dark-green;
+$navbar-light-hover-color: $green;
+$navbar-light-active-color: $green;
+
 $border-radius-lg: 1.25rem;
 
+$spacer: 1rem;
+$spacers: (
+	0: 0,
+	//0px
+	1: $spacer * 0.25,
+	//4px
+	2: $spacer * 0.5,
+	//8px
+	3: $spacer,
+	//16px
+	4: $spacer * 1.5,
+	//24px
+	5: $spacer * 1.875,
+	//30px
+	6: $spacer * 2,
+	//32px
+	7: $spacer * 2.5,
+	//40px
+	8: $spacer * 3,
+	//48px
+	9: $spacer * 3.75,
+	//60px
+	10: $spacer * 5.625,
+	//90px
+	11: $spacer * 8.125,
+	//130px
+);
+
 // 3. Include remainder of required Bootstrap stylesheets
-@import "../node_modules/bootstrap/scss/variables";
-@import "../node_modules/bootstrap/scss/mixins";
-@import "../node_modules/bootstrap/scss/root";
+@import "./bootstrap/scss/variables";
+@import "./bootstrap/scss/mixins";
+@import "./bootstrap/scss/root";
 
 /* finally, import Bootstrap to set the changes! */
-@import "../node_modules/bootstrap/scss/bootstrap";
+@import "./bootstrap/scss/bootstrap";
 
 .btn {
 	&:hover {
-		background-color: $dark-green;
+		background-color: $hijau-lumut;
+		box-shadow: inset 5px 3px 13px rgba($black, 0.45);
 	}
-}
-
-.header {
-	background-image: linear-gradient(to top left, #fff 50%, $green 140%);
 }
 
 .nav-link.active {
@@ -83,79 +117,134 @@ $border-radius-lg: 1.25rem;
 	}
 }
 
-.tentang-kami-description {
-	background-image: -webkit-gradient(
-		linear,
-		left top,
-		left bottom,
-		from(rgba($medium-green, 0.4)),
-		to(#fff)
-	);
-	background-image: linear-gradient(
-		to bottom,
-		rgba($medium-green, 0.4) 0%,
-		$white 100%
-	);
-	backdrop-filter: blur(6px);
-	-webkit-backdrop-filter: blur(6px);
-
+.height-md-75vh {
 	@media (min-width: 768px) {
-		margin-left: -11.75rem;
-		margin-top: 12.375rem;
+		min-height: 75vh;
 	}
 }
 
-.card-psikolog {
-	position: relative;
-	width: 22.75rem;
-	height: 28.75rem;
-	border-radius: 1.25rem;
-	margin: 0 1rem;
-	padding: 1rem 2rem;
+.vh-120 {
+	height: 120vh;
+}
 
-	&:hover {
-		background-color: rgba($black, 0.5);
+// Style untuk halaman utama(beranda)
+.header {
+	height: 100%;
+	background: linear-gradient(
+		115deg,
+		rgba(36, 101, 79, 1) 0%,
+		rgba(80, 150, 113, 1) 46%,
+		rgba(36, 101, 79, 1) 100%
+	);
+	border-radius: 0 0 15% 15%;
+	& .hero {
+		& .highlight {
+			position: relative;
+			& .text {
+				position: relative;
+				z-index: 10;
+			}
+			& .underline {
+				position: absolute;
+				width: 105%;
+				height: 11.5px;
+				left: -5%;
+				bottom: 0.5vw;
+				border-radius: 0 0 2.5rem 2.5rem;
+				z-index: 0;
+
+				/* Green Logo */
+				background: $green-logo;
+				transform: rotate(-2.84deg);
+			}
+		}
 	}
+}
 
-	.arrow {
-		cursor: pointer;
+.statistik {
+	margin-top: -15vh;
+	.container {
+		box-shadow: 1px 3px 40px rgba($black, 0.2);
 	}
+	@media (max-width: 991.98px) {
+		margin-top: -20vw;
+	}
+}
 
-	.description {
-		display: none;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		border-radius: 1.25rem;
-		background-color: rgba($white, 0.2);
-
-		.close {
-			position: absolute;
-			top: 1rem;
-			right: 1.5rem;
-			color: $black;
-			cursor: pointer;
+.produk-kami {
+	& figure {
+		height: 412px;
+		& figcaption {
 			font-size: 1.5rem;
 		}
 	}
 }
 
-.testimonials {
-	background-image: -webkit-gradient(
-		linear,
-		left top,
-		right top,
-		color-stop(50%, $light-green),
-		color-stop(150%, $green)
-	);
-	background-image: linear-gradient(
-		to right,
-		$light-green 50%,
-		$medium-green 150%
-	);
+.daftar-psikolog {
+	.card-psikolog {
+		position: relative;
+		width: 22.75rem;
+		height: 28.75rem;
+		@media screen and (max-width: 576px) {
+			width: 20rem;
+		}
+		border-radius: 1.25rem;
+		margin: 0 1rem;
+		background-size: cover;
+		background-position: bottom;
+		background-repeat: no-repeat;
 
+		&:before {
+			content: "";
+			display: block;
+			height: 100%;
+			position: absolute;
+			width: 100%;
+			background: linear-gradient(
+				359.9deg,
+				rgba($dark-green, 0.72),
+				rgba($dark-green, 0)
+			);
+			border-radius: 1.25rem;
+		}
+
+		& .nama-psikolog {
+			position: absolute;
+			z-index: 10;
+			bottom: 1rem;
+			width: 100%;
+			padding: 0 1rem;
+		}
+
+		.arrow {
+			padding: 1rem;
+			cursor: pointer;
+		}
+
+		.description {
+			display: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 1.25rem;
+			background-color: rgba($light-green, 0.7);
+			z-index: 20;
+
+			.close {
+				position: absolute;
+				top: 1rem;
+				right: 1.5rem;
+				color: $black;
+				cursor: pointer;
+				font-size: 1.5rem;
+			}
+		}
+	}
+}
+
+.testimonials {
 	.card-testimonial-full {
 		position: relative;
 		width: 21.375rem;
@@ -187,6 +276,10 @@ $border-radius-lg: 1.25rem;
 		left: 50%;
 		-webkit-transform: translateX(-50%);
 		transform: translateX(-50%);
+		background-image: url("../assets/img/ilustrasi/cewe.png");
+		background-size: cover;
+		background-position: bottom;
+		background-repeat: no-repeat;
 	}
 
 	@media (max-width: 767.98px) {
@@ -197,6 +290,15 @@ $border-radius-lg: 1.25rem;
 			margin-bottom: 8rem;
 		}
 	}
+}
+
+.footer {
+	background: linear-gradient(
+		115deg,
+		rgba(36, 101, 79, 1) 0%,
+		rgba(80, 150, 113, 1) 46%,
+		rgba(36, 101, 79, 1) 100%
+	);
 }
 
 // TENTANG KAMI
@@ -213,14 +315,19 @@ $border-radius-lg: 1.25rem;
 	background-color: #000;
 }
 
-.navbar-tentang-kami {
+.navbar-history {
 	height: 142px;
 	width: 100%;
-	background-color: $medium-green;
+	background: linear-gradient(
+		115deg,
+		rgba(36, 101, 79, 1) 0%,
+		rgba(80, 150, 113, 1) 46%,
+		rgba(36, 101, 79, 1) 100%
+	);
 }
 
 .pencapaian {
-	margin-top: -10vw;
+	margin-top: -5vw;
 	max-width: 1124px;
 	min-height: 250px;
 	border-radius: 10px;
@@ -228,23 +335,41 @@ $border-radius-lg: 1.25rem;
 		& .card {
 			width: 196px;
 			height: 150px;
-		}
-		& .body {
-			position: relative;
-			z-index: 2;
-			margin-top: -2vw;
+			box-shadow: 0px -4px 4px -1px rgba($black, 0.2);
 		}
 	}
 }
 
-.prestasi {
-	& .card {
-		width: 416px;
-		height: 450px;
+// LAYANAN PAGE
+.card-lokasi {
+	position: relative;
+	width: 12.25rem;
+	height: 17.188rem;
+	@media screen and (max-width: 768px) {
+		width: 14rem;
+	}
+	margin: 0 1rem;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 10px;
+
+	&:before {
+		content: "";
+		display: block;
+		height: 100%;
+		position: absolute;
+		width: 100%;
+		background: linear-gradient(
+			359.9deg,
+			rgba($dark-green, 0.72),
+			rgba($dark-green, 0)
+		);
+		border-radius: 10px;
 	}
 }
 
-// ACARA
+// ACARA PAGE
 .acara {
 	& .card {
 		width: 415px;
@@ -254,6 +379,116 @@ $border-radius-lg: 1.25rem;
 			width: 100%;
 			height: 400px;
 		}
+	}
+}
+
+// ARTIKEL PAGE
+.artikel {
+	background-image: url("../assets/img/artikel/bg-artikel.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	&:before {
+		background-color: linear-gradient(
+			356.97deg,
+			rgba(13, 14, 13, 1),
+			rgba(2, 34, 9, 0)
+		);
+		content: "";
+		display: block;
+		height: 100%;
+		position: absolute;
+		width: 100%;
+	}
+	& .container {
+		z-index: 50;
+	}
+}
+
+// PSIKOLOG PAGE
+.nav button {
+	width: 40px;
+	height: 40px;
+	background: transparent;
+	border-radius: 50%;
+	border: 2px solid #000;
+	position: absolute;
+	z-index: 99;
+	top: 1300px;
+	@media screen and (max-width: 768px) {
+		top: 800px;
+	}
+	cursor: pointer;
+	&.prev {
+		left: 20%;
+		@media screen and (max-width: 768px) {
+			left: 10%;
+		}
+		display: none;
+		&.show {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+	&.next {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		right: 20%;
+		@media screen and (max-width: 768px) {
+			right: 10%;
+		}
+		&.hide {
+			display: none;
+		}
+	}
+}
+
+.slider {
+	@media screen and (max-width: 768px) {
+		display: none;
+	}
+	& .slider-inner {
+		position: relative;
+		width: 100%;
+		height: 460px;
+		overflow: hidden;
+		& .track {
+			position: absolute;
+			left: 0;
+			top: 0;
+			& .card {
+				background: rgba($black, 0.2);
+				width: 364px;
+				height: 460px;
+				border-radius: 1.25rem;
+				&.active {
+					border: 2px solid $black;
+				}
+				& .card-img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					border-radius: 1.25rem;
+				}
+			}
+		}
+	}
+}
+
+.deskripsi-psikolog {
+	& .psikolog-img {
+		height: 400px;
+		object-fit: contain;
+		object-position: top;
+		border-radius: 1.25rem;
+	}
+
+	& .content ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
 	}
 }
 
@@ -271,5 +506,80 @@ $border-radius-lg: 1.25rem;
 			rgb(71, 159, 118),
 			rgba(18, 189, 109, 0.81)
 		);
+	}
+}
+
+// Scroll To Top
+.scroll-to-top {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	width: 50px;
+	height: 50px;
+	border: none;
+	justify-content: center;
+	align-items: center;
+	display: none;
+	color: #fff;
+	background: linear-gradient(
+		to bottom right,
+		rgb(71, 159, 118),
+		rgb(18, 189, 109)
+	);
+	border-radius: 50%;
+	cursor: pointer;
+	z-index: 99;
+}
+
+// preloader
+.preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background-color: #fff;
+}
+.preloader .loading {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.lds-ring {
+	display: inline-block;
+	position: relative;
+	width: 80px;
+	height: 80px;
+}
+.lds-ring div {
+	box-sizing: border-box;
+	display: block;
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	margin: 8px;
+	border: 8px solid $hijau-lumut;
+	border-radius: 50%;
+	animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+	border-color: $hijau-lumut transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+	animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+	animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+	animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
 	}
 }

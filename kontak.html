@@ -12,17 +12,57 @@
 			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
 			rel="stylesheet"
 		/>
-
+		<!-- IMPORT ICON  -->
+		<link
+			rel="icon"
+			href="./assets/logo/logo-hidup.png"
+			sizes="16x8"
+			type="image/x-icon "
+		/>
+		<!-- IMPORT MATERIAL ICONS -->
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
 		<!-- IMPORT CSS LOCAL -->
-		<link rel="stylesheet" href="src/main.css" />
+		<link rel="stylesheet" href="./src/main.css" />
+
+		<link
+			rel="stylesheet"
+			href="./src/owl-carousel/assets/owl.carousel.min.css"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="./src/owl-carousel/assets/owl.theme.default.css"
+		/>
 
 		<title>Kontak Hidup</title>
 	</head>
-	<body class="bg-light-green">
+	<body>
+		<!-- PRELOADER -->
+		<div class="preloader">
+			<div class="loading">
+				<div class="lds-ring">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+		</div>
+		<!-- PRELOADER END -->
 		<!-- NAVBAR BOOTSTRAP -->
-		<nav class="navbar navbar-expand-lg navbar-light pt-5 fw-semi-bold">
-			<div class="container-xl">
-				<a class="navbar-brand" href="#">HIDUP</a>
+		<nav class="navbar navbar-expand-lg navbar-light pt-lg-5 fw-semi-bold">
+			<div class="container">
+				<a class="navbar-brand" href="index.html">
+					<img
+						src="./assets/logo/logo-hidup.png"
+						alt="logo hidup"
+						width="160"
+						height="60"
+					/>
+				</a>
 				<button
 					class="navbar-toggler"
 					type="button"
@@ -40,13 +80,13 @@
 							<a class="nav-link" href="index.html">Beranda</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Artikel</a>
+							<a class="nav-link" href="artikel.html">Artikel</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="acara.html">Acara</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Layanan</a>
+							<a class="nav-link" href="layanan.html">Layanan</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link active" aria-current="page" href="kontak.html"
@@ -60,9 +100,9 @@
 		<!-- END NAVBAR BOOTSTRAP -->
 		<!-- KONTAK -->
 		<section class="kontak my-5">
-			<div class="container-xl">
+			<div class="container">
 				<div class="row justify-content-center">
-					<div class="col-md-5 form p-5 border border-2 border-dark">
+					<div class="col-md-5 form p-5 border border-2 border-dark rounded-3">
 						<h2 class="fw-bold fs-3 text-center">Kirimkan Kita Pesan</h2>
 						<form class="d-flex flex-column justify-content-center mt-5">
 							<div class="mb-3 d-flex gap-2">
@@ -108,85 +148,115 @@
 							</div>
 							<button
 								type="submit"
-								class="
-									btn btn-green
-									text-white
-									align-self-center
-									rounded-3
-									py-2
-									px-4
-								"
+								class="btn btn-green text-white align-self-center rounded-3 py-2 px-4"
 							>
 								Kirim Pesan
 							</button>
 						</form>
 					</div>
 					<div
-						class="
-							col-md-5
-							informasi
-							p-5
-							d-flex
-							flex-column
-							justify-content-between
-							align-items-center
-						"
+						class="col-md-5 informasi p-5 d-flex flex-column justify-content-between align-items-center rounded-3"
 					>
 						<h2 class="fw-bold fs-3 text-center">Informasi Kontak</h2>
-						<div class="d-flex flex-column gap-2">
-							<div class="lokasi d-flex gap-4">
+						<div class="d-flex flex-column gap-2 px-5">
+							<div class="d-flex align-items-center gap-4">
 								<img
 									class="img-fluid"
 									src="./assets/icons/lokasi.png"
 									alt="lokasi"
 								/>
-								<p class="fw-semi-bold">Jl. durma 1, No 19. Bandung</p>
+								<p class="fw-semi-bold">
+									Jl. Ganesa No.15, Lb. Siliwangi, Kecamatan Coblong, Kota
+									Bandung, Jawa Barat 40132
+								</p>
 							</div>
-							<div class="lokasi d-flex gap-4">
+							<div class="d-flex align-items-center gap-4 my-2 mb-3">
 								<img
 									class="img-fluid"
-									src="./assets/icons/lokasi.png"
-									alt="lokasi"
+									src="./assets/icons/gmail.png"
+									alt="gmail"
 								/>
-								<p class="fw-semi-bold">Jl. durma 1, No 19. Bandung</p>
+								<a
+									href="mailto:hidupmediaid@gmail.com"
+									class="fw-semi-bold text-decoration-none text-black"
+									>hidupmediaid@gmail.com</a
+								>
 							</div>
-							<div class="lokasi d-flex gap-4">
+							<div class="d-flex align-items-center gap-4">
 								<img
 									class="img-fluid"
-									src="./assets/icons/lokasi.png"
-									alt="lokasi"
+									src="./assets/icons/whatsapp.png"
+									alt="whatsapp.png"
 								/>
-								<p class="fw-semi-bold">Jl. durma 1, No 19. Bandung</p>
+								<a
+									href="https://api.whatsapp.com/send?phone=629123456789&text=Halo%20Hidup%2C%20Saya%20ingin%20konsultasi"
+									class="fw-semi-bold text-decoration-none text-black"
+									>+629123456789</a
+								>
 							</div>
 						</div>
 						<div class="sosmed d-flex gap-5">
-							<img
-								class="img-fluid"
-								src="./assets/icons/lokasi.png"
-								alt="lokasi"
-							/>
-							<img
-								class="img-fluid"
-								src="./assets/icons/lokasi.png"
-								alt="lokasi"
-							/>
-							<img
-								class="img-fluid"
-								src="./assets/icons/lokasi.png"
-								alt="lokasi"
-							/>
-							<img
-								class="img-fluid"
-								src="./assets/icons/lokasi.png"
-								alt="lokasi"
-							/>
+							<a href="https://www.instagram.com/hidupmedia/">
+								<img
+									class="img-fluid"
+									src="./assets/icons/instagram-black.png"
+									alt="instagram-black.png"
+								/>
+							</a>
+							<a href="https://www.tiktok.com/@hidupmedia">
+								<img
+									class="img-fluid"
+									src="./assets/icons/tiktok-black.png"
+									alt="tiktok-black.png"
+								/>
+							</a>
+							<a href="https://www.linkedin.com/company/hidupmedia/">
+								<img
+									class="img-fluid"
+									src="./assets/icons/linkedin-black.png"
+									alt="linkedin-black.png"
+								/>
+							</a>
+							<a
+								href="https://www.youtube.com/channel/UChWjckcVtPqu45u_rOPllYw"
+							>
+								<img
+									class="img-fluid"
+									src="./assets/icons/youtube-black.png"
+									alt="youtube-black.png"
+								/>
+							</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 		<!-- END KONTAK -->
+
+		<!-- Scroll To Top Element -->
+		<button
+			type="button"
+			class="scroll-to-top"
+			data-bs-toggle="tooltip"
+			data-bs-placement="top"
+			title="Scroll to top"
+		>
+			<i class="material-icons"> keyboard_arrow_up </i>
+		</button>
+		<!-- End Scroll To Top -->
+
+		<!-- IMPORT JQUERY -->
+		<script src="./src/owl-carousel/jquery.min.js"></script>
+		<script>
+			$(document).ready(function () {
+				$(".preloader").fadeOut();
+			});
+		</script>
+		<!-- IMPORT JAVASCRIPT LOCAL -->
+		<script src="./src/js/scrollToTop.js"></script>
+		<script src="./src/js/navbar.js"></script>
+
 		<!-- IMPORT JAVASCRIPT BOOTSTRAP-->
-		<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="./src/bootstrap/dist/js/bootstrap.min.js"></script>
 	</body>
 </html>
