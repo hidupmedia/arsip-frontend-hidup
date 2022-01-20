@@ -2,8 +2,7 @@
 
 Project Website hidup merupakan website yang menyediakan informasi terkait penjelasan perusahaan, layanan, dan artikel yang dimiliki oleh hidup.
 
-Tampilan pada website ini menyesuaikan UI Design yang tersedia pada link berikut <br/>
-[UI Design hidup](https://www.figma.com/file/xDQH6IVOzn5p320zzE50Jx/Website-HIDUP?node-id=0%3A1)
+Tampilan pada website ini menyesuaikan UI Design yang tersedia pada link berikut : [UI Design hidup](https://www.figma.com/file/xDQH6IVOzn5p320zzE50Jx/Website-HIDUP?node-id=0%3A1)
 
 Tampilan website dapat diakses melalui :
 [Demo Aplikasi](https://alvintriseptia.github.io/coba-frontend-hidup)
