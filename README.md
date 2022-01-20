@@ -5,6 +5,9 @@ Project Website hidup merupakan website yang menyediakan informasi terkait penje
 Tampilan pada website ini menyesuaikan UI Design yang tersedia pada link berikut <br/>
 [UI Design hidup](https://www.figma.com/file/xDQH6IVOzn5p320zzE50Jx/Website-HIDUP?node-id=0%3A1)
 
+Tampilan website dapat diakses melalui :
+[Demo Aplikasi](https://alvintriseptia.github.io/coba-frontend-hidup)
+
 Teknologi yang digunakan dalam pembuatan Frontend website hidup ialah : <br/>
 - [Bootstrap 5](https://getbootstrap.com/) - Framework css
 - [Sass](https://sass-lang.com/) - Kustomisasi Bootstrap
