@@ -8,6 +8,7 @@ Tampilan website dapat diakses melalui :
 [Demo Aplikasi](https://alvintriseptia.github.io/coba-frontend-hidup)
 
 Teknologi yang digunakan dalam pembuatan Frontend website hidup ialah : <br/>
+
 - [Bootstrap 5](https://getbootstrap.com/) - Framework css
 - [Sass](https://sass-lang.com/) - Kustomisasi Bootstrap
 - [Owl Carousel](http://owlcarousel2.github.io/OwlCarousel2/) - Library JS untuk membuat carousel

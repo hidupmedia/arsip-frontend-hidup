@@ -63,16 +63,22 @@
 		/>
 
 		<!-- IMPORT CSS LOCAL -->
-		<link rel="stylesheet" href="./src/main.css" />
+		<link
+			rel="preload"
+			href="dist/main.css"
+			as="style"
+			onload="this.onload=null;this.rel='stylesheet'"
+		/>
+		<noscript><link rel="stylesheet" href="dist/main.css" /></noscript>
 
 		<link
 			rel="stylesheet"
-			href="./src/owl-carousel/assets/owl.carousel.min.css"
+			href="src/owl-carousel/assets/owl.carousel.min.css"
 		/>
 
 		<link
 			rel="stylesheet"
-			href="./src/owl-carousel/assets/owl.theme.default.css"
+			href="src/owl-carousel/assets/owl.theme.default.css"
 		/>
 	</head>
 	<body class="vh-120">
@@ -673,14 +679,12 @@
 
 		<!-- IMPORT JQUERY -->
 		<script src="./src/owl-carousel/jquery.min.js"></script>
+		<script src="./src/owl-carousel/owl.carousel.min.js"></script>
 		<script>
 			$(document).ready(function () {
 				$(".preloader").fadeOut();
 			});
 		</script>
-
-		<!-- IMPORT JAVSCRIPT CAROUSEL -->
-		<script src="./src/owl-carousel/owl.carousel.min.js"></script>
 		<script>
 			$(".owl-carousel").owlCarousel({
 				loop: false,
@@ -701,9 +705,7 @@
 			});
 		</script>
 		<!-- IMPORT JAVASCRIPT LOCAL -->
-		<script src="./src/index.js"></script>
-		<script src="./src/js/navbar.js"></script>
-		<script src="./src/js/scrollToTop.js"></script>
+		<script src="./src/js/index.js"></script>
 		<!-- IMPORT JAVASCRIPT BOOTSTRAP-->
 		<script src="./src/bootstrap/dist/js/bootstrap.min.js"></script>
 	</body>

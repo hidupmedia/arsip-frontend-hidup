@@ -27,16 +27,22 @@
 		/>
 
 		<!-- IMPORT CSS LOCAL -->
-		<link rel="stylesheet" href="./src/main.css" />
+		<link
+			rel="preload"
+			href="dist/main.css"
+			as="style"
+			onload="this.onload=null;this.rel='stylesheet'"
+		/>
+		<noscript><link rel="stylesheet" href="dist/main.css" /></noscript>
 
 		<link
 			rel="stylesheet"
-			href="./src/owl-carousel/assets/owl.carousel.min.css"
+			href="src/owl-carousel/assets/owl.carousel.min.css"
 		/>
 
 		<link
 			rel="stylesheet"
-			href="./src/owl-carousel/assets/owl.theme.default.css"
+			href="src/owl-carousel/assets/owl.theme.default.css"
 		/>
 		<title>Psikolog HIDUP</title>
 	</head>
