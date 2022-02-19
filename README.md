@@ -58,6 +58,14 @@ Teknologi yang digunakan dalam pembuatan Frontend website hidup ialah : <br/>
 
 ## Cara Menggunakan Website
 
+### **Download melalui gdrive**
+
+[Frontend](https://drive.google.com/drive/folders/1uvTFAxGWs3xAZPjYqgbIs26NHxGpiZoZ?usp=sharing)
+
+[Assets](https://drive.google.com/drive/folders/1UjeO_rZDVNHnFabiLro482U6GIgTGY_w?usp=sharing)
+
+### **Menggunakan Git**
+
 1. Pastikan sudah terdapat aplikasi git di dalam komputer Anda. Jika belum, silahkan download aplikasi git terbaru di [Git](https://git-scm.com/downloads)
 2. Buka command prompt/windows powershell/git bash di komputer Anda.
 3. Ketik command
