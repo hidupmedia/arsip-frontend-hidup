@@ -70,6 +70,7 @@ Teknologi yang digunakan dalam pembuatan Frontend website hidup ialah : <br/>
 ## Kekurangan Saat Ini
 
 1. Slider pada halaman Psikologi masih belum responsive, dan belum semua design selesai dibuat.
+2. Tampilan artikel masih belum ada
 
 ## Kontak
 
