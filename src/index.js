@@ -14,8 +14,8 @@ card.addEventListener("click", (e) => {
 });
 
 card.getElementsByClassName("card-psikolog")[0].style.backgroundImage =
-	"url(./assets/img/psikolog/adinda-fitriani.png)";
+	"url(/public/assets/img/psikolog/adinda-fitriani.png)";
 card.getElementsByClassName("card-psikolog")[1].style.backgroundImage =
-	"url(./assets/img/psikolog/erwin-fazrin.png)";
+	"url(/public/assets/img/psikolog/erwin-fazrin.png)";
 card.getElementsByClassName("card-psikolog")[2].style.backgroundImage =
-	"url(./assets/img/psikolog/gita-yolanda.png)";
+	"url(/public/assets/img/psikolog/gita-yolanda.png)";
